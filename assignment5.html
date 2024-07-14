@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Examples</title>
+  
+</head>
+<body>
+  
+  
+  <button onclick="displayLanguages()">Display Languages</button>
+  <br><br>
+  <!-- Button to display employee information -->
+  <button onclick="displayEmployeeInfo()">Display Employee Info</button>
+  <br><br>
+  <!-- Button that triggers the alert when the mouse is moved over it -->
+  <button onmouseover="displayAlert()">Move Mouse Here</button>
+  <br><br>
+  <!-- Button to find and display the largest number -->
+  <button onclick="displayLargestNumber()">Find Largest Number</button>
+<br><br>
+<!-- Button to display programming languages -->
+  <button onclick="validateName()">Validate Name</button> 
+
+
+
+
+<script>
+    // Arrays Example
+    function displayLanguages() {
+      // Array to store programming languages
+      var languages = ["JavaScript", "Python", "Java", "C++", "Ruby", "Swift", "HTML", "CSS"];
+      // Display languages in an alert box
+      alert("Programming Languages:\n\n" + languages.join("\n"));
+    }
+
+    // Objects Example
+    function displayEmployeeInfo() {
+      // Object to store employee information
+      var employee = {
+        name: "John Doe",
+        employeeNo: "E12345",
+        age: 30,
+        department: "IT"
+      };
+      // Display employee information in an alert box
+      alert("Employee " + employee.name + " is working in " + employee.department + " department.");
+    }
+
+    // Functions Example
+    function findLargestNumber(num1, num2, num3) {
+      // Find the largest number among three
+      return Math.max(num1, num2, num3);
+    }
+
+    function displayLargestNumber() {
+      var num1 = 10;
+      var num2 = 20;
+      var num3 = 15;
+      // Call the function to find the largest number
+      var largest = findLargestNumber(num1, num2, num3);
+      // Display the largest number in an alert box
+      alert("The largest number is: " + largest);
+    }
+  </script>
+ <script>
+    function validateName() {
+      // Prompt the user to enter a name
+      var name = prompt("Please enter your name:");
+
+      // Check if the user entered a name
+      if (name === null || name === "") {
+        // Display an error message if no name is entered
+        alert("Sorry, you have not entered any name.");
+      } else {
+        // Display a welcome message if a name is entered
+        alert("Hello " + name + ", welcome!");
+      }
+    }
+  </script>
+  <script>
+    // Function to display alert message when mouse is moved over the button
+    function displayAlert() {
+      alert("You have moved the mouse on the button");
+    }
+  </script>
+  </body>
+</html>
